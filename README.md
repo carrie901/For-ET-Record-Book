@@ -1,9 +1,12 @@
-# For-ET6-Record-Book
+# For-ET-Record-Book
 
-基于ET6,[之前版本的相关资料在论坛](https://bbs.honorworkroom.com/forum.php?mod=viewthread&tid=210&extra=page%3D1)
+**基于ET6.0**
+
+[4.0-5.0的相关](https://bbs.honorworkroom.com/forum.php?mod=viewthread&tid=210&extra=page%3D1)
 
 # ET
-从不考虑收费，et开源的目标是推动前后端全部使用c#做游戏。
+
+> 熊猫:从不考虑收费，et开源的目标是推动前后端全部使用c#做游戏。
 
 [[Github]](https://github.com/egametang/ET)
 [[ET论坛]](https://bbs.honorworkroom.com/forum.php)
@@ -66,7 +69,7 @@ ET是一个开源的游戏客户端（基于unity3d）服务端双端框架，�
 
 
 你可能需要如下知识储备:
-- [C#语言基础 (CLR Via C#)](/Base/CSharp.md)
+- [C#语言基础 (CLR Via C#)](/Base/CSharpBase.md)
 - 设计模式
 - [数据结构](/Base/DataStructure.md)
 - 了解ECS
@@ -108,7 +111,7 @@ https://github.com/genechiu/NavMesh
 
 1. 之前每个功能是一个进程，比如realm gate location map，现在改成每个功能是一个Scene，一个Scene可以放到一个进程中。这样一台物理机先启动固定的进程，然后各个scene放到进程中运行。非常类似docker。
 2. 所有的Scene放在一个进程就变成了AllServer模式
-3.服务器内部全部使用actor发送消息，比如realm发给gate，其实是发个actor消息到gate scene
+3. 服务器内部全部使用actor发送消息，比如realm发给gate，其实是发个actor消息到gate scene
 4. dbserver将取消，每个进程直连mongodb，使用异步调用存取数据
 5.协程锁简化了很多实现，例如location队列，actor队列，mailbox消息队列，全部使用协程锁实现，代码非常精简。
 6. Scene可以开服前配置好在哪个进程（比如realm gate）也可以动态创建（比如副本，分线场景）。动态创建Scene回收Scene非常简单。
