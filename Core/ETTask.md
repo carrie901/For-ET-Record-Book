@@ -61,48 +61,62 @@
 4. 取消任务`public ETTask<IResponse> Call(IRequest request, CancellationToken cancellationToken)`
 
 ---
+```java
+【群主】熊猫(80081771)
+永远使用ETTask就行了，绝对不用Task
+【群主】熊猫(80081771)
+Task里面很多方法是多线程实现的，没搞清楚随便用会出问题。
+ETtask完全是单线程的，不会提供多线程的方法，你想用也没法用。这好比lua。
+lua虽然没有多线程，但是能够保证新手都不容易出错.
+【群主】熊猫(80081771)
+ET 中ETVoid跟async void,一样的用法.
+```
 
-【群主】熊猫(80081771)
-永远使用`ETTask`就行了，绝对不用`Task`
-【群主】熊猫(80081771)
-`Task`里面很多方法是**多线程**实现的，没搞清楚随便用会出问题。`ETtask`完全是**单线程**的，不会提供多线程的方法，你想用也没法用。这好比lua。lua虽然没有多线程，但是能够保证新手都不容易出错.
-【群主】熊猫(80081771)
-ET 中`ETVoid`跟`async void`,一样的用法.
 
 ---
 
-
-
+```java
 【群主】熊猫(80081771)
-`ETVoid`替代`async void`，性能大大提高, 不用`ETVoid`就要用`async void`，`async void`生成的东西比较复杂，性能稍微差一点.
+ETVoid替代async void，性能大大提高, 不用ETVoid就要用async void，async void生成的东西比较复杂，性能稍微差一点.
+```
 
 > 注意master中不要使用async void，要用ETVoid代替，这样才能捕获异常打印log，否则asyncvoid中需要自己去try catch
 
 ---
+```java
 
 【群主】熊猫(80081771)
 把ETTask当成Task使用就行了
-
 【群主】熊猫(80081771)
-这两个使用很简单啊，`etvoid`是代替`async void`，**意思是新开一个协程**。`ETTask`跟`Task`一样。当然`Task`不去`await`也相当于新开协程，但是编辑器会冒出提示，提示你`await`。所以新开协程最好用`ETVoid`。4.0用asyncvoid。使用场景，自己写写就明白啦
-
+这两个使用很简单啊，etvoid是代替async void，意思是新开一个协程。
+ETTask跟Task一样。当然Task不去await也相当于新开协程，但是编辑器会冒出提示，提示你await。
+所以新开协程最好用ETVoid。4.0用asyncvoid。使用场景，自己写写就明白啦
 【群主】熊猫(80081771)
-**协程就是回调** 啊
+协程就是回调啊
+```
+
+
 
 > `Task`用于没有结果的异步方法（即过程），而`Task<T>`用于返回结果的异步方法（即函数）。剩下的async void方法主要是为了与事件处理程序（`void Button_Click(object sender, EventArgs e)`那种）向后兼容而存在的，应避免在其他地方使用，因为它们内部未处理的异常将使整个过程崩溃。
 
 # 关于异步的几篇文章
 
 【码神】烟雨迷离半世殇(1778139321)
+
 [解析C#中的异步方法](https://www.lfzxb.top/dissecting-the-async-methods-in-c/)
+
 [拓展C#中的异步方法](https://www.lfzxb.top/extending-the-async-methods-in-c/)
+
 [C#中异步方法的特征性能特征](https://www.lfzxb.top/the-performance-characteristics-of-async-methods-in-c/)
 
 ---
 
 [[翻译]剖析C#中的异步方法 raytheweak ](https://www.cnblogs.com/raytheweak/p/8735141.html)
+
 [[翻译]扩展C#中的异步方法 raytheweak ](https://www.cnblogs.com/raytheweak/p/9130594.html)
+
 [[翻译]C#中异步方法的性能特点 raytheweak ](https://www.cnblogs.com/raytheweak/p/9314229.html)
+
 [[翻译]用一个用户场景来掌握它们 raytheweak ](https://www.cnblogs.com/raytheweak/p/9383273.html)
 
 ---
