@@ -8,7 +8,7 @@
 
 ```csharp
 /// <summary>
-/// 存放的  Entity.Id, OnceWaitTimer
+/// 存放的  Entity.Id, (ITimer)Timer
 /// 管理计时器的ID和实现了ITimer接口(Run方法)的计时器
 /// </summary>
 private readonly Dictionary<long, ITimer> timers = new Dictionary<long, ITimer>();
