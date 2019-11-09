@@ -115,3 +115,9 @@ https://github.com/genechiu/NavMesh
 4. dbserver将取消，每个进程直连mongodb，使用异步调用存取数据
 5.协程锁简化了很多实现，例如location队列，actor队列，mailbox消息队列，全部使用协程锁实现，代码非常精简。
 6. Scene可以开服前配置好在哪个进程（比如realm gate）也可以动态创建（比如副本，分线场景）。动态创建Scene回收Scene非常简单。
+
+# 群友提供的教程&工具(6.0相关)
+
+- [swicksu/ET-Assistant](https://github.com/swicksu/ET-Assistant)  by 零基础 - 苏伟涛
+  - [相关用法的B站教学视频](https://space.bilibili.com/72371081?spm_id_from=333.788.b_765f7570696e666f.2)
+- [烟雨迷离半世殇的ET6.0教程](https://space.bilibili.com/33595745)
