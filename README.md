@@ -63,6 +63,7 @@ ET是一个开源的游戏客户端（基于unity3d）服务端双端框架，�
   - KCP.android.ARM64问题
 - [ET6.0问题收集](https://bbs.honorworkroom.com/forum.php?mod=viewthread&tid=239&page=1&extra=#pid645)
   - 启动服务器命令行参数错误
+  - 6.0 beta版 release后运行会出现bug
 
 
 # 学习ET
@@ -120,5 +121,5 @@ https://github.com/genechiu/NavMesh
 
 - [swicksu/ET-Assistant](https://github.com/swicksu/ET-Assistant)  by 零基础 - 苏伟涛
   - [相关用法的B站教学视频](https://space.bilibili.com/72371081?spm_id_from=333.788.b_765f7570696e666f.2)
-- [烟雨迷离半世殇的ET6.0教程](https://space.bilibili.com/33595745)
+- [烟雨迷离半世殇的ET6.0教程(连载中)](https://space.bilibili.com/33595745)
 - [ET & Addressable C# 热更方案分享](http://www.liuocean.com/index.php/2019/11/19/et-addressable-c-re-geng-fang-an-fen-xiang/#Addressable-3)
